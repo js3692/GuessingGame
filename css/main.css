@@ -1,0 +1,19 @@
+body header {
+	text-align: center;
+}
+
+#instructions {
+	text-align: justify;
+}
+
+.container {
+	max-width: 500px;
+}
+
+.main-box {
+	text-align: center;
+}
+
+input {
+	text-align: center;
+}
