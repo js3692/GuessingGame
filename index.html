@@ -24,46 +24,55 @@
   			<h2>Welcome to Guessing Game!</h2>
   		</header>
 		
-  		<p class="lead" id="instructions">Instructions: For each round, a random number will be generated. You have to guess that number within five tries, but the game will assist you with hints on how close you are to the number. Good luck!</p>
+  		<p class="lead" id="instructions">Instructions: For each round, a <b>random number</b> will be generated. You have to <b>guess</b> that number within <b>five</b> tries, but the game will assist you with hints on how close you are to the number. Good luck!</p>
 
   		<hr>
 
-      <div class="row">
-        <div class="col-xs-7" id="guessHelp">
-          Guess higher (0/5)
+      <div class="row row-user-guesses">
+        <div class="col-xs-4">Your Guesses:</div>
+        <div class="col-xs-8 user-guesses"></div>
+      </div>
+
+      <div class="row" id="guess-status">
+        <div class="col-xs-3 guess-range">
         </div>
-        <div class="col-xs-5" id="guessStatus" align="right">
-          Cold
+        <div class="col-xs-4 guess-proximity">
+        </div>
+        <div class="col-xs-5 guess-round" align="right">
+          (5/5) remaining
         </div>
       </div>
 
-      <div class="main-box">
-        <input type="text" id="inputNumber" class="form-control input">
-
-        <div class="row">
-          <div class="col-xs-6">
-            <a class="btn btn-success btn-lg btn-block" href="#" id="submit">Submit</a>
-          </div>
-          <div class="col-xs-6">
-            <a class="btn btn-info btn-lg btn-block" href="#" id="getHint" >Get Hint</a>
-            </div>
+      <form>       
+        <div class="user-input">
+          <input type="text" class="form-control input center-block">
+          <input type="submit" class="btn btn-success btn-lg center-block" >
         </div>
-      </div>
+      </form>
 
-      <div style="display: none" align="center">
-        Win / lose. / display answer
+      <hr>
+
+      <div class = "row">
+        <div class="col-xs-6">
+          <button class="btn btn-default btn-lg btn-block" href="#" id="restart">Restart</button>
+        </div>
+        <div class="col-xs-6">
+          <button class="btn btn-info btn-lg btn-block" id="getHint">Get Hint
+            </button>
+        </div>
       </div>
 
       <hr>
 
-  		<a class="btn btn-default btn-lg btn-block" href="#" id="restart">Restart</a>
-  		
+      <div style="display: none" align="center" id="answer"></div>
+
   	</div>
 
   	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/game.js"></script>
   </body>
 </html>

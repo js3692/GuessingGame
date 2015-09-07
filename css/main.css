@@ -8,12 +8,26 @@ body header {
 
 .container {
 	max-width: 500px;
+	text-align: center;
 }
 
 .main-box {
 	text-align: center;
 }
 
-input {
+form {
 	text-align: center;
+}
+
+input {
+	margin: 10px;
+	text-align: center;
+}
+
+#answer {
+	margin-top: 20px;
+}
+
+.row-user-guesses {
+	margin-bottom: 20px;
 }
